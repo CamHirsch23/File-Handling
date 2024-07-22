@@ -1,0 +1,15 @@
+# Question 1 
+# Task 1 
+
+import os
+
+def list_directory_contents(path):
+    try:
+        # List and print all files and subdirectories in the given path
+        contents = os.listdir(path)
+        for item in contents:
+            print(item)
+    except FileNotFoundError:
+        print("Invalid path. Please enter a valid directory path.")
+    except NotADirectoryError:
+        print("The specified path is not a directory.")
